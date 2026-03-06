@@ -1,0 +1,77 @@
+{
+  "common": {
+    "hint": "Hint",
+    "hideHint": "Hide Hint",
+    "check": "Check",
+    "confirm": "Confirm",
+    "next": "Next",
+    "prev": "Prev",
+    "nextLevel": "Next Level",
+    "trackComplete": "Track Complete!",
+    "correct": "Correct!",
+    "completed": "Done",
+    "levels": "levels",
+    "tagName": "tag name"
+  },
+  "landing": {
+    "subtitle": "HTML Structure Training",
+    "description": "Don't memorize tags — learn to see structure. Solve short problems and internalize HTML document structure.",
+    "startButton": "Start Learning",
+    "featureTarget": "Match Target Structure",
+    "featureTargetDesc": "Write code to match the target DOM structure. Watch the tree update in real time.",
+    "featureFeedback": "Instant Feedback",
+    "featureFeedbackDesc": "Invalid nesting triggers immediate warnings with clear structural error explanations.",
+    "featureStructure": "Structural Sense",
+    "featureStructureDesc": "No CSS, no rendered output. Focus purely on document structure.",
+    "tracks": "Learning Tracks",
+    "footer": "TagQuest — The fastest way to master HTML structure"
+  },
+  "tracks": {
+    "title": "Learning Tracks",
+    "description": "Each track can be taken independently. Start with whichever interests you.",
+    "backToTracks": "← Track List"
+  },
+  "level": {
+    "goal": "Goal",
+    "targetStructure": "Target Structure",
+    "domTree": "Live DOM Tree",
+    "emptyEditor": "Write code to see the DOM tree",
+    "tagSelect": "Tag Select",
+    "fillBlank": "Fill in the Blank",
+    "directInput": "Direct Input",
+    "fixError": "Fix Error",
+    "semanticChoice": "Semantic Choice",
+    "sortOrder": "Sort Order",
+    "blockAssemble": "Block Assemble",
+    "context": "Context",
+    "editorLoading": "Loading editor..."
+  },
+  "feedback": {
+    "correct": ["Correct!", "Well done!", "Perfect!"],
+    "correctWithHint": "You'll get it without a hint next time!",
+    "wrongRetry": "That's okay. Try again!",
+    "wrongStructure": "The structure is a bit off. Check the target structure again.",
+    "missingTag": "The <{tag}> tag is missing.",
+    "forbiddenTag": "The <{tag}> tag is not allowed in this problem.",
+    "extraTag": "The <{tag}> tag is unnecessary.",
+    "needTag": "The <{tag}> tag is needed."
+  },
+  "validation": {
+    "ulChild": "<{child}> cannot be a child of <ul>. Only <li> is allowed inside <ul>.",
+    "olChild": "<{child}> cannot be a child of <ol>. Only <li> is allowed inside <ol>.",
+    "tableChild": "<{child}> cannot be a direct child of <table>.",
+    "trChild": "<{child}> can only be placed inside <tr>.",
+    "selectChild": "<{child}> cannot be inside <select>. Only <option> is allowed.",
+    "dlChild": "<{child}> cannot be inside <dl>. Only <dt> and <dd> are allowed.",
+    "liParent": "<li> must be a direct child of <ul>, <ol>, or <menu>.",
+    "tdParent": "<td> must be inside a <tr>.",
+    "thParent": "<th> must be inside a <tr>.",
+    "dtParent": "<dt> must be inside a <dl>.",
+    "ddParent": "<dd> must be inside a <dl>.",
+    "captionParent": "<caption> must be inside a <table>.",
+    "figcaptionParent": "<figcaption> must be inside a <figure>.",
+    "imgAlt": "<img> is missing the \"{attr}\" attribute. Add it for accessibility.",
+    "aHref": "<a> without \"{attr}\" cannot function as a link.",
+    "singleton": "Only one <{tag}> element is allowed per page."
+  }
+}

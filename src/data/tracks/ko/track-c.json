@@ -1,0 +1,121 @@
+{
+  "id": "track-c",
+  "title": "리스트",
+  "description": "순서 없는 목록, 순서 있는 목록, 메뉴 구조를 배워요.",
+  "color": "#10B981",
+  "levels": [
+    {
+      "id": "track-c-1",
+      "trackId": "track-c",
+      "order": 1,
+      "title": "순서 없는 목록",
+      "learningPoint": "목록은 ul > li 구조로 만들어요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "사과, 바나나, 포도를 순서 없는 목록으로 만들어보세요.",
+      "starterCode": "<!-- 여기에 작성해보세요 -->",
+      "targetStructure": {
+        "tag": "ul",
+        "children": [
+          { "tag": "li", "textContent": "사과" },
+          { "tag": "li", "textContent": "바나나" },
+          { "tag": "li", "textContent": "포도" }
+        ]
+      },
+      "hint": "ul은 unordered list, li는 list item의 약자예요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["ul", "li"],
+        "forbiddenTags": ["ol"]
+      },
+      "successMessage": "완벽해요! ul은 항목의 순서가 중요하지 않을 때 써요."
+    },
+    {
+      "id": "track-c-2",
+      "trackId": "track-c",
+      "order": 2,
+      "title": "순서 있는 목록",
+      "learningPoint": "순서가 중요한 목록은 ol > li로 만들어요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "요리 순서를 순서 있는 목록으로 만들어보세요: 재료 준비, 볶기, 담기",
+      "starterCode": "<!-- 여기에 작성해보세요 -->",
+      "targetStructure": {
+        "tag": "ol",
+        "children": [
+          { "tag": "li", "textContent": "재료 준비" },
+          { "tag": "li", "textContent": "볶기" },
+          { "tag": "li", "textContent": "담기" }
+        ]
+      },
+      "hint": "ol은 ordered list예요. 순서가 있는 목록에 사용해요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["ol", "li"],
+        "forbiddenTags": ["ul"]
+      },
+      "successMessage": "ol은 순서가 중요한 목록에 써요. 레시피, 절차, 랭킹 등에 딱이에요!"
+    },
+    {
+      "id": "track-c-3",
+      "trackId": "track-c",
+      "order": 3,
+      "title": "메뉴 구조",
+      "learningPoint": "네비게이션 메뉴는 nav > ul > li > a 구조로 만들어요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "홈, 소개, 연락처 3개의 링크가 있는 네비게이션 메뉴를 만들어보세요.",
+      "starterCode": "<nav>\n  <!-- 여기에 ul > li > a 구조를 만들어보세요 -->\n</nav>",
+      "targetStructure": {
+        "tag": "nav",
+        "children": [
+          {
+            "tag": "ul",
+            "children": [
+              { "tag": "li", "children": [{ "tag": "a", "textContent": "홈" }] },
+              { "tag": "li", "children": [{ "tag": "a", "textContent": "소개" }] },
+              { "tag": "li", "children": [{ "tag": "a", "textContent": "연락처" }] }
+            ]
+          }
+        ]
+      },
+      "hint": "nav 안에 ul을 넣고, 각 li 안에 a 태그로 링크를 만들어요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["nav", "ul", "li", "a"]
+      },
+      "successMessage": "nav > ul > li > a는 웹에서 가장 흔한 메뉴 패턴이에요!"
+    },
+    {
+      "id": "track-c-4",
+      "trackId": "track-c",
+      "order": 4,
+      "title": "중첩 목록",
+      "learningPoint": "목록 안에 또 다른 목록을 넣을 수 있어요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "과일 아래에 사과, 딸기를 하위 목록으로 만들어보세요.",
+      "starterCode": "<ul>\n  <li>과일\n    <!-- 여기에 하위 목록을 넣어보세요 -->\n  </li>\n  <li>채소</li>\n</ul>",
+      "targetStructure": {
+        "tag": "ul",
+        "children": [
+          {
+            "tag": "li",
+            "children": [
+              {
+                "tag": "ul",
+                "children": [
+                  { "tag": "li", "textContent": "사과" },
+                  { "tag": "li", "textContent": "딸기" }
+                ]
+              }
+            ]
+          },
+          { "tag": "li", "textContent": "채소" }
+        ]
+      },
+      "hint": "li 안에 새로운 ul을 넣으면 하위 목록이 돼요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["ul", "li"]
+      },
+      "successMessage": "중첩 목록은 카테고리 분류에 자주 쓰여요. li 안에 새 ul을 넣는 패턴을 기억하세요!"
+    }
+  ]
+}

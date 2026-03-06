@@ -1,0 +1,77 @@
+{
+  "common": {
+    "hint": "힌트",
+    "hideHint": "힌트 닫기",
+    "check": "검사하기",
+    "confirm": "확인",
+    "next": "다음",
+    "prev": "이전",
+    "nextLevel": "다음 레벨",
+    "trackComplete": "트랙 완료!",
+    "correct": "정답!",
+    "completed": "완료",
+    "levels": "레벨",
+    "tagName": "태그명"
+  },
+  "landing": {
+    "subtitle": "HTML 구조 감각 훈련",
+    "description": "태그를 외우는 게 아니라, 구조를 보는 눈을 만드세요. 짧은 문제를 풀며 HTML 문서 구조를 체득합니다.",
+    "startButton": "학습 시작하기",
+    "featureTarget": "목표 구조 맞추기",
+    "featureTargetDesc": "목표 DOM 구조를 보고 코드를 작성하세요. 실시간으로 트리가 변합니다.",
+    "featureFeedback": "즉시 피드백",
+    "featureFeedbackDesc": "잘못된 중첩은 바로 경고. 한국어로 된 구조적 오류 설명을 받아보세요.",
+    "featureStructure": "구조 감각",
+    "featureStructureDesc": "CSS 없이, 렌더링 결과 없이. 순수하게 문서 구조만 집중합니다.",
+    "tracks": "학습 트랙",
+    "footer": "TagQuest — HTML 구조를 체득하는 가장 빠른 방법"
+  },
+  "tracks": {
+    "title": "학습 트랙",
+    "description": "각 트랙은 독립적으로 진행할 수 있어요. 관심 있는 트랙부터 시작하세요.",
+    "backToTracks": "← 트랙 목록"
+  },
+  "level": {
+    "goal": "목표",
+    "targetStructure": "목표 구조",
+    "domTree": "실시간 DOM 트리",
+    "emptyEditor": "코드를 입력하면 DOM 트리가 표시돼요",
+    "tagSelect": "태그 고르기",
+    "fillBlank": "빈칸 채우기",
+    "directInput": "직접 입력",
+    "fixError": "오류 찾기",
+    "semanticChoice": "시맨틱 선택",
+    "sortOrder": "순서 맞추기",
+    "blockAssemble": "블록 조립",
+    "context": "상황",
+    "editorLoading": "에디터 로딩 중..."
+  },
+  "feedback": {
+    "correct": ["정답이에요!", "잘했어요!", "완벽해요!"],
+    "correctWithHint": "힌트 없이도 곧 될 거예요!",
+    "wrongRetry": "아직 괜찮아요. 다시 해봐요!",
+    "wrongStructure": "구조가 조금 달라요. 목표 구조를 다시 확인해보세요.",
+    "missingTag": "{tag} 태그가 빠져있어요.",
+    "forbiddenTag": "{tag} 태그는 이 문제에서 사용하면 안 돼요.",
+    "extraTag": "{tag} 태그가 불필요하게 있어요.",
+    "needTag": "{tag} 태그가 필요해요."
+  },
+  "validation": {
+    "ulChild": "{child}는 ul의 자식이 될 수 없어요. ul 안에는 li만 올 수 있어요.",
+    "olChild": "{child}는 ol의 자식이 될 수 없어요. ol 안에는 li만 올 수 있어요.",
+    "tableChild": "{child}는 table의 직접 자식이 될 수 없어요.",
+    "trChild": "{child}는 tr 안에만 올 수 있어요.",
+    "selectChild": "{child}는 select 안에 올 수 없어요. option만 가능해요.",
+    "dlChild": "{child}는 dl 안에 올 수 없어요. dt와 dd만 가능해요.",
+    "liParent": "li는 ul, ol, menu의 직접 자식이어야 해요.",
+    "tdParent": "td는 반드시 tr 안에 있어야 해요.",
+    "thParent": "th는 반드시 tr 안에 있어야 해요.",
+    "dtParent": "dt는 dl 안에 있어야 해요.",
+    "ddParent": "dd는 dl 안에 있어야 해요.",
+    "captionParent": "caption은 table 안에 있어야 해요.",
+    "figcaptionParent": "figcaption은 figure 안에 있어야 해요.",
+    "imgAlt": "img에 {attr} 속성이 없어요. 접근성을 위해 추가해보세요.",
+    "aHref": "a 태그에 {attr}가 없으면 링크 역할을 못 해요.",
+    "singleton": "{tag}은 페이지에 하나만 있어야 해요."
+  }
+}

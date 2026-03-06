@@ -1,0 +1,79 @@
+{
+  "id": "track-d",
+  "title": "Layout Skeleton",
+  "description": "Learn semantic layout tags: header, main, footer, nav, section, and more.",
+  "color": "#8B5CF6",
+  "levels": [
+    {
+      "id": "track-d-1",
+      "trackId": "track-d",
+      "order": 1,
+      "title": "Page Skeleton",
+      "learningPoint": "Most web pages are divided into header, main, and footer",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Write header, main, and footer in the correct order.",
+      "starterCode": "<!-- Write header, main, footer in order -->",
+      "targetStructure": { "tag": "body", "children": [{ "tag": "header" }, { "tag": "main" }, { "tag": "footer" }] },
+      "hint": "Just like reading top to bottom, pages are structured from top to bottom.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["header", "main", "footer"] },
+      "successMessage": "These three elements are the foundation of semantic HTML!"
+    },
+    {
+      "id": "track-d-2",
+      "trackId": "track-d",
+      "order": 2,
+      "title": "Nav Placement",
+      "learningPoint": "Navigation typically goes inside the header",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Place a nav element inside the header.",
+      "starterCode": "<header>\n  <!-- Add nav here -->\n</header>\n<main>\n  <p>Main content</p>\n</main>",
+      "targetStructure": { "tag": "body", "children": [{ "tag": "header", "children": [{ "tag": "nav" }] }, { "tag": "main" }] },
+      "hint": "Simply put a nav tag inside the header.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["header", "nav", "main"] },
+      "successMessage": "nav groups the main navigation links. Placing it inside header is the common pattern."
+    },
+    {
+      "id": "track-d-3",
+      "trackId": "track-d",
+      "order": 3,
+      "title": "Sections in Main",
+      "learningPoint": "Use section to group content by topic inside main",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Create 2 sections inside main, each with an h2 heading.",
+      "starterCode": "<main>\n  <!-- Create 2 sections here -->\n</main>",
+      "targetStructure": { "tag": "main", "children": [{ "tag": "section", "children": [{ "tag": "h2" }] }, { "tag": "section", "children": [{ "tag": "h2" }] }] },
+      "hint": "Each section should have its own h2 heading to identify the topic.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["main", "section", "h2"] },
+      "successMessage": "Giving each section a heading makes the document structure clear!"
+    },
+    {
+      "id": "track-d-4",
+      "trackId": "track-d",
+      "order": 4,
+      "title": "Section vs Div",
+      "learningPoint": "section is a thematic grouping, div is a generic container",
+      "problemType": "SEMANTIC_CHOICE",
+      "instructions": "A content block titled 'Latest News' with several paragraphs — which tag is more appropriate?",
+      "options": ["section", "div", "article"],
+      "context": "A thematic content block with an h2 heading and multiple paragraphs",
+      "targetStructure": { "tag": "section" },
+      "hint": "This block has a clear topic: 'Latest News'.",
+      "validator": { "mode": "CONTAINS", "requiredTags": ["section"] },
+      "successMessage": "section is for thematic groupings that could have a heading. div has no semantic meaning."
+    },
+    {
+      "id": "track-d-5",
+      "trackId": "track-d",
+      "order": 5,
+      "title": "Aside Placement",
+      "learningPoint": "aside holds content indirectly related to the main content",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Place main and aside side by side. Put h1 in main and h2 in aside.",
+      "starterCode": "<!-- Write main and aside here -->",
+      "targetStructure": { "tag": "body", "children": [{ "tag": "main", "children": [{ "tag": "h1" }] }, { "tag": "aside", "children": [{ "tag": "h2" }] }] },
+      "hint": "aside is used for sidebars, related links, and supplementary content.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["main", "aside"] },
+      "successMessage": "aside is commonly used for blog sidebars, related articles, and ads!"
+    }
+  ]
+}

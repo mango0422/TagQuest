@@ -1,0 +1,108 @@
+{
+  "id": "track-e",
+  "title": "콘텐츠 의미 구분",
+  "description": "article, section, aside의 차이와 실전 사용법을 배워요.",
+  "color": "#F59E0B",
+  "levels": [
+    {
+      "id": "track-e-1",
+      "trackId": "track-e",
+      "order": 1,
+      "title": "article이란",
+      "learningPoint": "article은 독립적으로 의미가 통하는 콘텐츠 단위예요",
+      "problemType": "TAG_SELECT",
+      "instructions": "블로그 글 하나를 감싸는 데 가장 적절한 태그는?",
+      "options": ["article", "section", "div", "main"],
+      "targetStructure": { "tag": "article" },
+      "hint": "이 콘텐츠를 다른 사이트에 옮겨도 의미가 통하나요?",
+      "validator": {
+        "mode": "CONTAINS",
+        "requiredTags": ["article"]
+      },
+      "successMessage": "article은 독립적으로 배포 가능한 콘텐츠에 써요. 뉴스 기사, 블로그 글이 대표적이에요."
+    },
+    {
+      "id": "track-e-2",
+      "trackId": "track-e",
+      "order": 2,
+      "title": "article vs section",
+      "learningPoint": "article은 독립적으로 배포 가능한 콘텐츠, section은 주제별 묶음이에요",
+      "problemType": "SEMANTIC_CHOICE",
+      "instructions": "RSS 피드에 넣어도 의미가 통하는 독립적인 블로그 글 1개를 감싸는 태그는?",
+      "options": ["article", "section", "div"],
+      "context": "RSS 피드에 넣어도 의미가 통하는 독립적인 블로그 글 1개",
+      "targetStructure": { "tag": "article" },
+      "hint": "이 콘텐츠를 잘라서 다른 사이트에 올려도 의미가 통하나요?",
+      "validator": {
+        "mode": "CONTAINS",
+        "requiredTags": ["article"]
+      },
+      "successMessage": "맞아요! article은 독립적으로 의미가 통하는 콘텐츠에 써요."
+    },
+    {
+      "id": "track-e-3",
+      "trackId": "track-e",
+      "order": 3,
+      "title": "article 내부 구조",
+      "learningPoint": "article 안에 h2, p, footer를 넣어 완전한 글 구조를 만들어요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "article 안에 h2 제목, p 본문, footer 작성자 정보를 넣어보세요.",
+      "starterCode": "<article>\n  <!-- h2, p, footer를 넣어보세요 -->\n</article>",
+      "targetStructure": {
+        "tag": "article",
+        "children": [
+          { "tag": "h2" },
+          { "tag": "p" },
+          { "tag": "footer" }
+        ]
+      },
+      "hint": "article 안에 h2(제목), p(본문), footer(작성자/날짜)를 순서대로 넣으세요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["article", "h2", "p", "footer"]
+      },
+      "successMessage": "article > h2 + p + footer는 블로그 글, 뉴스 기사의 전형적인 구조예요!"
+    },
+    {
+      "id": "track-e-4",
+      "trackId": "track-e",
+      "order": 4,
+      "title": "aside 의미",
+      "learningPoint": "aside는 본문과 간접적으로 관련된 보조 콘텐츠예요",
+      "problemType": "SEMANTIC_CHOICE",
+      "instructions": "블로그 본문 옆에 있는 '관련 글 목록'을 감싸는 태그는?",
+      "options": ["aside", "section", "div", "nav"],
+      "context": "본문과 간접적으로 관련된 보조 콘텐츠 (관련 글 목록)",
+      "targetStructure": { "tag": "aside" },
+      "hint": "이 콘텐츠를 빼도 본문의 의미가 달라지지 않아요.",
+      "validator": {
+        "mode": "CONTAINS",
+        "requiredTags": ["aside"]
+      },
+      "successMessage": "aside는 사이드바, 광고, 관련 글 등 보조 정보에 써요!"
+    },
+    {
+      "id": "track-e-5",
+      "trackId": "track-e",
+      "order": 5,
+      "title": "뉴스 카드 목록",
+      "learningPoint": "여러 article을 목록으로 나열할 때는 ul > li > article 패턴을 써요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "뉴스 기사 2개를 목록으로 만들어보세요. 각 기사에는 h3 제목을 넣으세요.",
+      "starterCode": "<!-- ul > li > article > h3 구조로 만들어보세요 -->",
+      "targetStructure": {
+        "tag": "ul",
+        "children": [
+          { "tag": "li", "children": [{ "tag": "article", "children": [{ "tag": "h3" }] }] },
+          { "tag": "li", "children": [{ "tag": "article", "children": [{ "tag": "h3" }] }] }
+        ]
+      },
+      "hint": "ul로 목록을 만들고, 각 li 안에 article을 넣어요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["ul", "li", "article", "h3"]
+      },
+      "successMessage": "뉴스 목록, 상품 목록 등에서 이 패턴을 자주 볼 수 있어요!"
+    }
+  ]
+}

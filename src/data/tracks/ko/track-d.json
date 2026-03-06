@@ -1,0 +1,119 @@
+{
+  "id": "track-d",
+  "title": "레이아웃의 뼈대",
+  "description": "header, main, footer, nav, section 등 시맨틱 레이아웃 태그를 배워요.",
+  "color": "#8B5CF6",
+  "levels": [
+    {
+      "id": "track-d-1",
+      "trackId": "track-d",
+      "order": 1,
+      "title": "페이지 기본 뼈대",
+      "learningPoint": "대부분의 웹 페이지는 header, main, footer로 나뉘어요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "header, main, footer를 올바른 순서로 작성하세요.",
+      "starterCode": "<!-- header, main, footer를 순서대로 작성해보세요 -->",
+      "targetStructure": {
+        "tag": "body",
+        "children": [
+          { "tag": "header" },
+          { "tag": "main" },
+          { "tag": "footer" }
+        ]
+      },
+      "hint": "사람이 위에서 아래로 읽듯이, 페이지도 위에서 아래 순서로 구성해요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["header", "main", "footer"]
+      },
+      "successMessage": "이 3가지 구조가 시맨틱 HTML의 시작이에요!"
+    },
+    {
+      "id": "track-d-2",
+      "trackId": "track-d",
+      "order": 2,
+      "title": "nav 위치",
+      "learningPoint": "네비게이션은 보통 header 안에 위치해요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "header 안에 nav를 넣어 네비게이션 영역을 만들어보세요.",
+      "starterCode": "<header>\n  <!-- 여기에 nav를 넣어보세요 -->\n</header>\n<main>\n  <p>본문 내용</p>\n</main>",
+      "targetStructure": {
+        "tag": "body",
+        "children": [
+          { "tag": "header", "children": [{ "tag": "nav" }] },
+          { "tag": "main" }
+        ]
+      },
+      "hint": "nav 태그를 header 안에 넣으면 돼요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["header", "nav", "main"]
+      },
+      "successMessage": "nav는 사이트의 주요 탐색 링크를 묶어요. header 안에 넣는 게 일반적이에요."
+    },
+    {
+      "id": "track-d-3",
+      "trackId": "track-d",
+      "order": 3,
+      "title": "main 안에 section",
+      "learningPoint": "main 안에서 주제별로 section을 나눌 수 있어요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "main 안에 2개의 section을 만들고, 각각 h2 제목을 넣어보세요.",
+      "starterCode": "<main>\n  <!-- 2개의 section을 만들어보세요 -->\n</main>",
+      "targetStructure": {
+        "tag": "main",
+        "children": [
+          { "tag": "section", "children": [{ "tag": "h2" }] },
+          { "tag": "section", "children": [{ "tag": "h2" }] }
+        ]
+      },
+      "hint": "section은 주제별 묶음이에요. 각 section에 h2 제목을 넣어 주제를 표시하세요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["main", "section", "h2"]
+      },
+      "successMessage": "section마다 제목(h2)을 넣으면 문서 구조가 명확해져요!"
+    },
+    {
+      "id": "track-d-4",
+      "trackId": "track-d",
+      "order": 4,
+      "title": "section vs div",
+      "learningPoint": "section은 주제가 있는 묶음, div는 의미 없는 묶음이에요",
+      "problemType": "SEMANTIC_CHOICE",
+      "instructions": "'최근 소식'이라는 제목이 있는 콘텐츠 묶음에 더 적절한 태그는?",
+      "options": ["section", "div", "article"],
+      "context": "h2 제목과 여러 문단이 있는 주제별 콘텐츠 묶음",
+      "targetStructure": { "tag": "section" },
+      "hint": "이 묶음은 '최근 소식'이라는 명확한 주제가 있어요.",
+      "validator": {
+        "mode": "CONTAINS",
+        "requiredTags": ["section"]
+      },
+      "successMessage": "section은 주제가 있는 콘텐츠 묶음이에요. 제목(heading)을 가질 수 있는 묶음에 써요."
+    },
+    {
+      "id": "track-d-5",
+      "trackId": "track-d",
+      "order": 5,
+      "title": "aside 위치",
+      "learningPoint": "aside는 본문과 간접적으로 관련된 보조 콘텐츠예요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "main과 aside를 나란히 배치해보세요. main에는 h1, aside에는 h2를 넣으세요.",
+      "starterCode": "<!-- main과 aside를 작성해보세요 -->",
+      "targetStructure": {
+        "tag": "body",
+        "children": [
+          { "tag": "main", "children": [{ "tag": "h1" }] },
+          { "tag": "aside", "children": [{ "tag": "h2" }] }
+        ]
+      },
+      "hint": "aside는 사이드바, 관련 링크 등 보조 콘텐츠에 써요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["main", "aside"]
+      },
+      "successMessage": "aside는 블로그의 사이드바, 관련 글 목록 등에 자주 쓰여요!"
+    }
+  ]
+}

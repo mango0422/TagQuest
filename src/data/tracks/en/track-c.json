@@ -1,0 +1,64 @@
+{
+  "id": "track-c",
+  "title": "Lists",
+  "description": "Learn unordered lists, ordered lists, and navigation menu structures.",
+  "color": "#10B981",
+  "levels": [
+    {
+      "id": "track-c-1",
+      "trackId": "track-c",
+      "order": 1,
+      "title": "Unordered List",
+      "learningPoint": "Lists are built with ul > li structure",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Create an unordered list with three items: Apple, Banana, Grape.",
+      "starterCode": "<!-- Write your code here -->",
+      "targetStructure": { "tag": "ul", "children": [{ "tag": "li", "textContent": "Apple" }, { "tag": "li", "textContent": "Banana" }, { "tag": "li", "textContent": "Grape" }] },
+      "hint": "ul stands for unordered list, li stands for list item.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["ul", "li"], "forbiddenTags": ["ol"] },
+      "successMessage": "ul is used when the order of items doesn't matter."
+    },
+    {
+      "id": "track-c-2",
+      "trackId": "track-c",
+      "order": 2,
+      "title": "Ordered List",
+      "learningPoint": "Use ol > li when the order matters",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Create an ordered list of cooking steps: Prepare, Cook, Serve.",
+      "starterCode": "<!-- Write your code here -->",
+      "targetStructure": { "tag": "ol", "children": [{ "tag": "li", "textContent": "Prepare" }, { "tag": "li", "textContent": "Cook" }, { "tag": "li", "textContent": "Serve" }] },
+      "hint": "ol stands for ordered list. Use it when sequence matters.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["ol", "li"], "forbiddenTags": ["ul"] },
+      "successMessage": "ol is perfect for recipes, instructions, rankings, and any sequential content!"
+    },
+    {
+      "id": "track-c-3",
+      "trackId": "track-c",
+      "order": 3,
+      "title": "Navigation Menu",
+      "learningPoint": "Navigation menus follow the nav > ul > li > a pattern",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Create a navigation menu with three links: Home, About, Contact.",
+      "starterCode": "<nav>\n  <!-- Build a ul > li > a structure here -->\n</nav>",
+      "targetStructure": { "tag": "nav", "children": [{ "tag": "ul", "children": [{ "tag": "li", "children": [{ "tag": "a", "textContent": "Home" }] }, { "tag": "li", "children": [{ "tag": "a", "textContent": "About" }] }, { "tag": "li", "children": [{ "tag": "a", "textContent": "Contact" }] }] }] },
+      "hint": "Put a ul inside nav, then each li contains an a link.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["nav", "ul", "li", "a"] },
+      "successMessage": "nav > ul > li > a is the most common navigation pattern on the web!"
+    },
+    {
+      "id": "track-c-4",
+      "trackId": "track-c",
+      "order": 4,
+      "title": "Nested Lists",
+      "learningPoint": "You can nest a list inside another list",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Add a sub-list under 'Fruits' with items: Apple, Strawberry.",
+      "starterCode": "<ul>\n  <li>Fruits\n    <!-- Add a sub-list here -->\n  </li>\n  <li>Vegetables</li>\n</ul>",
+      "targetStructure": { "tag": "ul", "children": [{ "tag": "li", "children": [{ "tag": "ul", "children": [{ "tag": "li", "textContent": "Apple" }, { "tag": "li", "textContent": "Strawberry" }] }] }, { "tag": "li", "textContent": "Vegetables" }] },
+      "hint": "Put a new ul inside the li to create a sub-list.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["ul", "li"] },
+      "successMessage": "Nested lists are commonly used for categories. Remember: a new ul goes inside the li!"
+    }
+  ]
+}

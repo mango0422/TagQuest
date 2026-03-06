@@ -1,0 +1,80 @@
+{
+  "id": "track-e",
+  "title": "Content Semantics",
+  "description": "Learn the differences between article, section, and aside in practice.",
+  "color": "#F59E0B",
+  "levels": [
+    {
+      "id": "track-e-1",
+      "trackId": "track-e",
+      "order": 1,
+      "title": "What is Article?",
+      "learningPoint": "article represents a self-contained piece of content",
+      "problemType": "TAG_SELECT",
+      "instructions": "What is the most appropriate tag to wrap a single blog post?",
+      "options": ["article", "section", "div", "main"],
+      "targetStructure": { "tag": "article" },
+      "hint": "Could this content stand alone if moved to another site?",
+      "validator": { "mode": "CONTAINS", "requiredTags": ["article"] },
+      "successMessage": "article is for self-contained, independently distributable content like blog posts and news articles."
+    },
+    {
+      "id": "track-e-2",
+      "trackId": "track-e",
+      "order": 2,
+      "title": "Article vs Section",
+      "learningPoint": "article is independently distributable, section is a thematic grouping",
+      "problemType": "SEMANTIC_CHOICE",
+      "instructions": "A standalone blog post that makes sense in an RSS feed — which tag?",
+      "options": ["article", "section", "div"],
+      "context": "A standalone blog post that makes sense in an RSS feed",
+      "targetStructure": { "tag": "article" },
+      "hint": "If you cut this content and paste it elsewhere, would it still make sense?",
+      "validator": { "mode": "CONTAINS", "requiredTags": ["article"] },
+      "successMessage": "article is for content that makes sense on its own."
+    },
+    {
+      "id": "track-e-3",
+      "trackId": "track-e",
+      "order": 3,
+      "title": "Article Internal Structure",
+      "learningPoint": "An article typically contains h2, p, and footer",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Add an h2 heading, p body text, and footer author info inside the article.",
+      "starterCode": "<article>\n  <!-- Add h2, p, and footer -->\n</article>",
+      "targetStructure": { "tag": "article", "children": [{ "tag": "h2" }, { "tag": "p" }, { "tag": "footer" }] },
+      "hint": "Put h2 (title), p (body), and footer (author/date) in order inside article.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["article", "h2", "p", "footer"] },
+      "successMessage": "article > h2 + p + footer is a classic pattern for blog posts and news articles!"
+    },
+    {
+      "id": "track-e-4",
+      "trackId": "track-e",
+      "order": 4,
+      "title": "Aside Semantics",
+      "learningPoint": "aside is for supplementary content indirectly related to the main content",
+      "problemType": "SEMANTIC_CHOICE",
+      "instructions": "A 'Related Posts' list next to a blog post — which tag?",
+      "options": ["aside", "section", "div", "nav"],
+      "context": "Supplementary content (related posts) next to the main article",
+      "targetStructure": { "tag": "aside" },
+      "hint": "Removing this content wouldn't change the meaning of the main article.",
+      "validator": { "mode": "CONTAINS", "requiredTags": ["aside"] },
+      "successMessage": "aside is for sidebars, ads, related links — supplementary information!"
+    },
+    {
+      "id": "track-e-5",
+      "trackId": "track-e",
+      "order": 5,
+      "title": "News Card List",
+      "learningPoint": "Multiple articles in a list use the ul > li > article pattern",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Create a list of 2 news articles, each with an h3 heading.",
+      "starterCode": "<!-- Build ul > li > article > h3 structure -->",
+      "targetStructure": { "tag": "ul", "children": [{ "tag": "li", "children": [{ "tag": "article", "children": [{ "tag": "h3" }] }] }, { "tag": "li", "children": [{ "tag": "article", "children": [{ "tag": "h3" }] }] }] },
+      "hint": "Wrap the list in ul, each item in li, and each post in article.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["ul", "li", "article", "h3"] },
+      "successMessage": "You'll see this pattern everywhere — news feeds, product lists, and card layouts!"
+    }
+  ]
+}

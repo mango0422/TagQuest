@@ -1,0 +1,92 @@
+{
+  "id": "track-a",
+  "title": "Text Tag Basics",
+  "description": "Learn the basic tags for headings, paragraphs, emphasis, and more.",
+  "color": "#3B82F6",
+  "levels": [
+    {
+      "id": "track-a-1",
+      "trackId": "track-a",
+      "order": 1,
+      "title": "Your First Heading",
+      "learningPoint": "h1 represents the most important heading on a page",
+      "problemType": "TAG_SELECT",
+      "instructions": "Which tag should you use to make this text the main heading of a page?",
+      "targetStructure": { "tag": "h1", "textContent": "Hello World" },
+      "options": ["h1", "p", "div", "span"],
+      "hint": "h1 stands for Heading 1. It's the largest and most important heading.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["h1"] },
+      "successMessage": "Correct! h1 is used for the single most important heading on a page."
+    },
+    {
+      "id": "track-a-2",
+      "trackId": "track-a",
+      "order": 2,
+      "title": "Heading Hierarchy",
+      "learningPoint": "h1-h6 represent heading levels. Lower number = higher importance",
+      "problemType": "FILL_BLANK",
+      "instructions": "Create a subheading below the main heading.",
+      "template": "<h1>Main Title</h1>\n<___>Subtitle</___>",
+      "targetStructure": { "tag": "body", "children": [{ "tag": "h1", "textContent": "Main Title" }, { "tag": "h2", "textContent": "Subtitle" }] },
+      "hint": "The next level heading after h1 has a number one higher.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["h1", "h2"] },
+      "successMessage": "h2 is the subheading under h1. The hierarchy goes h1 > h2 > h3 and so on."
+    },
+    {
+      "id": "track-a-3",
+      "trackId": "track-a",
+      "order": 3,
+      "title": "Making a Paragraph",
+      "learningPoint": "The p tag represents a paragraph of text",
+      "problemType": "FILL_BLANK",
+      "instructions": "Wrap this sentence in a paragraph tag.",
+      "template": "<___>I am learning HTML.</___>",
+      "targetStructure": { "tag": "p", "textContent": "I am learning HTML." },
+      "hint": "Think of the first letter of 'paragraph'.",
+      "validator": { "mode": "EXACT_MATCH", "requiredTags": ["p"] },
+      "successMessage": "p stands for paragraph. Use it to wrap blocks of text."
+    },
+    {
+      "id": "track-a-4",
+      "trackId": "track-a",
+      "order": 4,
+      "title": "Emphasis",
+      "learningPoint": "strong marks important text, em marks emphasized text",
+      "problemType": "TAG_SELECT",
+      "instructions": "Which tag should you use to mark a word as semantically important?",
+      "targetStructure": { "tag": "strong", "textContent": "important" },
+      "options": ["strong", "em", "b", "span"],
+      "hint": "strong conveys semantic importance, not just visual boldness.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["strong"] },
+      "successMessage": "strong conveys semantic importance. b only makes text bold visually."
+    },
+    {
+      "id": "track-a-5",
+      "trackId": "track-a",
+      "order": 5,
+      "title": "Line Break & Divider",
+      "learningPoint": "br is a line break, hr is a thematic divider. Both are self-closing",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Add a horizontal rule (hr) between the two paragraphs.",
+      "starterCode": "<p>First paragraph</p>\n\n<p>Second paragraph</p>",
+      "targetStructure": { "tag": "body", "children": [{ "tag": "p", "textContent": "First paragraph" }, { "tag": "hr" }, { "tag": "p", "textContent": "Second paragraph" }] },
+      "hint": "hr stands for horizontal rule. It's self-closing: just write <hr>.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["p", "hr"] },
+      "successMessage": "hr creates a thematic break between sections. It's a void element with no closing tag."
+    },
+    {
+      "id": "track-a-6",
+      "trackId": "track-a",
+      "order": 6,
+      "title": "Heading + Paragraph Combo",
+      "learningPoint": "Combine headings and paragraphs to structure your content",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "Write an h2 heading 'About Me' followed by a p paragraph 'Hello, I am a student.'",
+      "starterCode": "<!-- Write your code here -->",
+      "targetStructure": { "tag": "body", "children": [{ "tag": "h2", "textContent": "About Me" }, { "tag": "p", "textContent": "Hello, I am a student." }] },
+      "hint": "Write h2 for the heading first, then p for the content right below.",
+      "validator": { "mode": "STRUCTURE_MATCH", "requiredTags": ["h2", "p"] },
+      "successMessage": "Heading + paragraph is the most basic content structure. Real web pages start just like this!"
+    }
+  ]
+}

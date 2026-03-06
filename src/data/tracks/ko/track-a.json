@@ -1,0 +1,138 @@
+{
+  "id": "track-a",
+  "title": "텍스트 태그 기초",
+  "description": "제목, 문단, 강조 등 텍스트 관련 기본 태그를 배워요.",
+  "color": "#3B82F6",
+  "levels": [
+    {
+      "id": "track-a-1",
+      "trackId": "track-a",
+      "order": 1,
+      "title": "첫 번째 제목",
+      "learningPoint": "h1은 페이지에서 가장 중요한 제목을 나타내요",
+      "problemType": "TAG_SELECT",
+      "instructions": "이 텍스트를 페이지의 메인 제목으로 만들려면 어떤 태그를 써야 할까요?",
+      "targetStructure": {
+        "tag": "h1",
+        "textContent": "안녕하세요"
+      },
+      "options": ["h1", "p", "div", "span"],
+      "hint": "h1은 Heading 1의 약자예요. 페이지에서 가장 큰 제목이에요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["h1"]
+      },
+      "successMessage": "맞아요! h1은 페이지에서 딱 하나, 가장 중요한 제목에 써요."
+    },
+    {
+      "id": "track-a-2",
+      "trackId": "track-a",
+      "order": 2,
+      "title": "제목의 계층",
+      "learningPoint": "h1~h6은 제목의 중요도를 나타내요. 숫자가 작을수록 중요해요",
+      "problemType": "FILL_BLANK",
+      "instructions": "가장 중요한 제목 아래에 소제목을 만들어보세요.",
+      "template": "<h1>메인 제목</h1>\n<___>소제목</___>",
+      "targetStructure": {
+        "tag": "body",
+        "children": [
+          { "tag": "h1", "textContent": "메인 제목" },
+          { "tag": "h2", "textContent": "소제목" }
+        ]
+      },
+      "hint": "h1 다음 단계의 제목은 숫자가 하나 더 큰 태그예요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["h1", "h2"]
+      },
+      "successMessage": "h2는 h1 아래 단계의 소제목이에요. h1 > h2 > h3 순서로 계층을 만들어요."
+    },
+    {
+      "id": "track-a-3",
+      "trackId": "track-a",
+      "order": 3,
+      "title": "문단 만들기",
+      "learningPoint": "p 태그는 하나의 문단(paragraph)을 나타내요",
+      "problemType": "FILL_BLANK",
+      "instructions": "이 문장을 하나의 문단으로 감싸보세요.",
+      "template": "<___>HTML을 배우고 있어요.</___>",
+      "targetStructure": {
+        "tag": "p",
+        "textContent": "HTML을 배우고 있어요."
+      },
+      "hint": "paragraph의 첫 글자를 생각해보세요.",
+      "validator": {
+        "mode": "EXACT_MATCH",
+        "requiredTags": ["p"]
+      },
+      "successMessage": "p는 paragraph(문단)의 약자예요. 글의 덩어리마다 p로 묶어요."
+    },
+    {
+      "id": "track-a-4",
+      "trackId": "track-a",
+      "order": 4,
+      "title": "강조하기",
+      "learningPoint": "strong은 중요한 텍스트, em은 강조하고 싶은 텍스트에 써요",
+      "problemType": "TAG_SELECT",
+      "instructions": "\"중요\"라는 단어를 의미적으로 중요하다고 표시하려면 어떤 태그를 써야 할까요?",
+      "targetStructure": {
+        "tag": "strong",
+        "textContent": "중요"
+      },
+      "options": ["strong", "em", "b", "span"],
+      "hint": "strong은 '강한, 중요한'이라는 뜻이에요. 의미적 중요성을 나타내요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["strong"]
+      },
+      "successMessage": "strong은 의미적으로 중요한 텍스트에 써요. b는 단순히 굵게만 표시해요."
+    },
+    {
+      "id": "track-a-5",
+      "trackId": "track-a",
+      "order": 5,
+      "title": "줄바꿈과 구분선",
+      "learningPoint": "br은 줄바꿈, hr은 주제 구분선이에요. 둘 다 닫는 태그가 없어요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "두 문단 사이에 구분선(hr)을 넣어보세요.",
+      "starterCode": "<p>첫 번째 문단</p>\n\n<p>두 번째 문단</p>",
+      "targetStructure": {
+        "tag": "body",
+        "children": [
+          { "tag": "p", "textContent": "첫 번째 문단" },
+          { "tag": "hr" },
+          { "tag": "p", "textContent": "두 번째 문단" }
+        ]
+      },
+      "hint": "hr은 horizontal rule의 약자예요. 닫는 태그 없이 <hr>만 쓰면 돼요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["p", "hr"]
+      },
+      "successMessage": "hr은 주제가 바뀔 때 시각적 구분선을 넣어요. 닫는 태그가 필요 없는 빈 요소예요."
+    },
+    {
+      "id": "track-a-6",
+      "trackId": "track-a",
+      "order": 6,
+      "title": "제목 + 문단 조합",
+      "learningPoint": "제목과 문단을 함께 써서 글의 구조를 만들어요",
+      "problemType": "DIRECT_INPUT",
+      "instructions": "h2 제목 '자기소개'와 p 문단 '안녕하세요, 저는 학생입니다.'를 순서대로 작성하세요.",
+      "starterCode": "<!-- 여기에 작성해보세요 -->",
+      "targetStructure": {
+        "tag": "body",
+        "children": [
+          { "tag": "h2", "textContent": "자기소개" },
+          { "tag": "p", "textContent": "안녕하세요, 저는 학생입니다." }
+        ]
+      },
+      "hint": "h2로 제목을 먼저 쓰고, 바로 아래 p로 내용을 적어요.",
+      "validator": {
+        "mode": "STRUCTURE_MATCH",
+        "requiredTags": ["h2", "p"]
+      },
+      "successMessage": "제목 + 문단은 글의 가장 기본적인 구조예요. 실제 웹페이지도 이렇게 시작해요!"
+    }
+  ]
+}
